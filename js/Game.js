@@ -7,6 +7,11 @@ class Game {
       gameState = data.val();
     });
   }
+  update(state) {
+    database.ref("/").update({
+      gameState: state
+    });
+  }
 
   start() {
     player = new Player();
